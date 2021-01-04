@@ -81,7 +81,7 @@ namespace Controllers.ItemsController
             return NoContent();
         }
 
-          //DELETE /items/{id}
+        //DELETE /items/{id}
         [HttpDelete("{id}")]
         public ActionResult DeleteItem(Guid id)
         {
