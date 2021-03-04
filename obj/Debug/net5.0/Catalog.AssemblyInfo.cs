@@ -11,7 +11,11 @@
 using System;
 using System.Reflection;
 
+<<<<<<< HEAD
 [assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("b1c83545-c703-44ee-96f0-f9f865a32a2d")]
+=======
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("ad483d70-2a4d-431b-a3b2-d65991368801")]
+>>>>>>> main
 [assembly: System.Reflection.AssemblyCompanyAttribute("Catalog")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]

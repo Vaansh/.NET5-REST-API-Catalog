@@ -8,7 +8,12 @@ namespace Catalog.Settings
         public string Password { get; set; }
         public string ConnectionString 
         { 
+<<<<<<< HEAD
             get {
+=======
+            get 
+            {
+>>>>>>> main
                 return $"mongodb://{User}:{Password}@{Host}:{Port}";
             }
          }
