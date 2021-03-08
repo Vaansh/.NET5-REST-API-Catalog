@@ -55,7 +55,7 @@ Create resources with POST, validate the values of DTO properties, update resour
 
 5. ### Persisting entities with MongoDB
 Implement a simple MongoDB repository, run MongoDB as a docker container and use Postman to interact with a REST API.
-![11](https://github.com/Vaansh/.NET5-REST-API-Catalog/blob/main/images/11.png)
+
 
 6. ### Tasks, Async and Await
 The asynchronous programming model - use tasks, async and await to add asynchronous programming to the REST API.
