@@ -10,12 +10,12 @@ C#, .NET 5 Framework, Dependency Injection, Postman, SwaggerUI, CRUD (GET/POST/P
 
 ## Testing
 Run the following two commands and test the endpoints on `http://localhost:8080/items`
-```
+```zsh
 docker run -d --rm --name mongo -p 27017:27017 -v mongodbdata:/data/db 
 -e MONGO_INITDB_ROOT_USERNAME=mongoadmin -e MONGO_INITDB_ROOT_PASSWORD=Pass#word1 
 --network=CatalogNetwork mongo
 ```
-```
+```zsh
 docker run -it --rm -p 8080:80
 -e MongoDbSettings:Host=mongo -e MongoDbSettings:Password=Pass#word1 
 --network=CatalogNetwork vaansh/catalog01:v1
