@@ -15,7 +15,7 @@ namespace Controllers.ItemsController
     [Route("items")]
     public class ItemsController : ControllerBase
     {
-        private readonly IItemsRepository repository;       
+        private readonly IItemsRepository repository;
 
         private readonly ILogger<ItemsController> logger;
 
@@ -34,14 +34,14 @@ namespace Controllers.ItemsController
             logger.LogInformation($"{DateTime.UtcNow.ToString("hh:mm:ss")}: Retrieved {items.Count()} items");
             return items;
         }
-        
+
         // GET /items/{id}
         [HttpGet("{id}")]
         public async Task<ActionResult<ItemDto>> GetItemAsync(Guid id)
         {
             var item = await repository.GetItemAsync(id);
 
-            if(item is null)
+            if (item is null)
             {
                 return NotFound();
             }
@@ -63,7 +63,7 @@ namespace Controllers.ItemsController
 
             await repository.CreateItemAsync(item);
 
-            return CreatedAtAction(nameof(GetItemAsync), new {id = item.Id}, item.AsDto());
+            return CreatedAtAction(nameof(GetItemAsync), new { id = item.Id }, item.AsDto());
         }
 
 
@@ -73,7 +73,7 @@ namespace Controllers.ItemsController
         {
             var existingItem = await repository.GetItemAsync(id);
 
-            if(existingItem is null)
+            if (existingItem is null)
             {
                 return NotFound();
             }
@@ -95,14 +95,14 @@ namespace Controllers.ItemsController
         {
             var existingItem = await repository.GetItemAsync(id);
 
-            if(existingItem is null)
+            if (existingItem is null)
             {
                 return NotFound();
             }
-            
+
             await repository.DeleteItemAsync(id);
 
             return NoContent();
         }
-    }   
+    }
 }

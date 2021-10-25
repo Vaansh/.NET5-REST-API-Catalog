@@ -12,14 +12,14 @@ namespace Catalog.Repositories
         private const string databaseName = "catalog";
         private const string colletionName = "items";
         private readonly IMongoCollection<Item> itemsCollection;
-        private readonly FilterDefinitionBuilder<Item> filterBuilder = Builders<Item>.Filter; 
-        
+        private readonly FilterDefinitionBuilder<Item> filterBuilder = Builders<Item>.Filter;
+
         public MongoDbItemsRepository(IMongoClient mongoClient)
         {
             IMongoDatabase database = mongoClient.GetDatabase(databaseName);
             itemsCollection = database.GetCollection<Item>(colletionName);
         }
-        
+
         public async Task CreateItemAsync(Item item)
         {
             await itemsCollection.InsertOneAsync(item);
